@@ -1,0 +1,115 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: express thanks
+  steps:
+  - intent: thank
+  - action: utter_thanks
+
+- story: happy path
+  steps:
+  - intent: Bye
+  - action: utter_goodbye
+
+- story: ask_for_help
+  steps:
+  - user: can you help me?
+  - bot: utter_help
+
+- story: plan_cycling_route
+  steps:
+  - user: I'm looking for a cycling route
+  - bot: utter_find_a_route
+  - user: I'm thinking about a 5km ride with moderate difficulty
+  - bot: action_find_route
+  - bot: utter_suggest_route
+  - user: Tell me about the first option
+  - bot: action_describe_route
+  - user: Can I see a map of that route?
+  - bot: action_show_map   # Use a custom action to display a map
+
+- story: get_directions
+  steps:
+  - user: can you track my ride?
+  - bot: utter_track_my_ride
+  - user: I'm starting from [current location]
+  - bot: action_provide_directions
+
+- story: track_my_ride
+  steps:
+    - user: can you track my ride?
+    - bot: utter_track_my_ride
+    - action: trace_ride
+    - bot: utter_ride_stats
+
+  - story: find_a_bike_shop
+    steps:
+      - user: Where's the nearest bike shop?
+      - bot: utter_find_a_bike_shop
+      - action: find_bike_shop
+      - bot: utter_bike_shop_info
+      - bot: utter_bike_shop_image  # Include image response
+
+  - story: find_a_cycling_group
+    steps:
+      - user: I'm looking for cycling groups in my area.
+      - bot: utter_find_a_cycling_group
+      - action: find_cycling_groups
+      - bot: utter_list_cycling_groups
+
+  - story: recommend_a_bike
+    steps:
+      - user: What kind of bike should I get for [purpose]?
+      - bot: utter_recommend_a_bike
+      - action: recommend_bike
+      - bot: utter_bike_suggestions
+
+  - story: fix_a_flat_tire
+    steps:
+      - user: I have a flat tire.
+      - bot: utter_ask_for_supplies
+      - user: Yes, I have a spare tube and a pump.
+      - bot: utter_guide_flat_tire_repair
+      - bot: utter_chain_lubing_image  # Include image response if relevant
+      - bot: utter_offer_further_help
+
+  - story: lube_your_chain
+    steps:
+      - user: How do I lube my chain?
+      - bot: utter_lube_your_chain
+      - bot: utter_chain_lubing_image
+
+  - story: clean_your_bike
+    steps:
+      - user: How do I clean my bike?
+      - bot: utter_clean_your_bike
+
+  - story: check_the_weather
+    steps:
+      - user: What's the weather forecast?
+      - bot: utter_check_the_weather
+      - action: check_weather
+      - bot: utter_report_weather
+
+  - story: wear_a_helmet
+    steps:
+      - user: Should I wear a helmet?
+      - bot: utter_wear_a_helmet
+      - bot: utter_helmet_image
+
+  - story: obey_the_rules_of_the_road
+    steps:
+      - user: What are the rules of the road for cyclists?
+      - bot: utter_obey_the_rules_of_the_road
+
+  - story: be_aware_of_your_surroundings
+    steps:
+      - user: What should I watch out for when I'm cycling?
+      - action: utter_be_aware_of_your_surroundings
+      - action: list_cycling_hazards

@@ -1,0 +1,134 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - catch u later
+    - talk to you later
+
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - appreciated
+    - many thanks
+
+- intent: help
+  examples: |
+    - what can you do?
+    - can you help me
+    - i need some help
+
+- intent: find_a_route
+  examples: |
+    - can u help me find a cycling route?
+    - I'm looking for a good place to go cycling
+    - any suggestions for a scenic bike ride
+    - can you recommend a route that's about 5km long?
+    - I'm looking for a challenging climb
+
+- intent: get_directions
+  examples: |
+    - how do i get to [place]?
+    - can you give me directions to [place]?
+    - what's the best way to get to [place] by bike
+
+- intent: track_my_ride
+  examples: |
+    - can u track my ride
+    - how far have i gone?
+    - how fast am i going
+    - how many calories have i burned
+
+- intent: find_a_bike_shop
+  examples: |
+    - where's the nearest bike shop
+    - i need to get my bike fixed
+    - i'm looking for a new bike
+
+- intent: find_a_cycling_group
+  examples: |
+    - are there any cycling group in my area
+    - i'm looking for people to ride with
+    - how can i find a cycling club
+
+- intent: recommend_a_bike
+  examples: |
+    - what kind of bike should i get
+    - i'm looking for a bike for [purpose]
+    - can you recommend a bike that's under [price]
+
+- intent: fix_a_flat_tire
+  examples: |
+    - i have a flat tire
+    - can you help me fix my flat tire
+    - how can i change a flat tire
+
+- intent: lube_your_chain
+  examples: |
+    - how do i lube my chain
+    - when should i lube my chain
+    - what kinda lube should i use
+
+- intent: clean_my_bike
+  examples: |
+    - how do i clean my bike
+    - what's the best way to clean my bike
+    - what kinda cleaning products should i use
+
+- intent: check_the_weather
+  examples: |
+    - what's the weather forecast
+    - it is going to rain today
+    - what is the temperature
+
+- intent: wear_a_helmet
+  examples: |
+    - should i wear a helmet
+    - where can i buy a helmet
+    - how do i choose the right helmet
+
+- intent: obey_the_rule_of_the_road
+  examples: |
+    - what are the rules of the road for cyclists
+    - can i ride on the sidewalk
+    - do i have to stop at stop signs
+
+- intent: be_aware_of_your_surroundings
+  examples: |
+    - what should i watch out for when cycling
+    - how can i stay safe while cycling
+    - what are the most common cycling hazards
+
+- intent: tell_me_about_your_ride
+  examples: |
+    - how was your ride
+    - where did you go
+    - what did you see
+
+- intent: share_a_photo
+  examples: |
+    - can you share a photo of your ride
+    - did you take any pictures
+    - i'd love to see some photos
+
+- intent: join_the_cycling_community
+  examples: |
+    - how can i connect with other cyclists
+    - are there any online cycling communities
+    - what are some good cycling forums

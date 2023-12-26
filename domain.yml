@@ -1,0 +1,79 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thank
+  - help
+  - find_a_route
+  - get_directions
+  - track_my_ride
+  - find_a_bike_shop
+  - find_a_cycling_group
+  - recommend_a_bike
+  - fix_a_flat_tire
+  - lube_your_chain
+  - clean_your_bike
+  - check_the_weather
+  - wear_a_helmet
+  - obey_the_rules_of_the_road
+  - be_aware_of_your_surroundings
+  - tell_me_about_your_ride
+  - share_a_photo
+  - join_the_cycling_community
+
+entities:
+  - location
+  - distance
+  - difficulty
+  - bike type
+  - weather
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hey there, ready to roll?"
+  - text: "Welcome cycling enthusiast! What's on your mind today"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "See you on the road!"
+  - text: "Happy trails! Stay safe out there."
+  - text: "Keep those wheels turning! I'll be here if you need me"
+
+  utter_thanks:
+  - text: "You are welcome, it is my pleasure to assist you"
+
+  utter_help:
+  - text: "Happy to help! What can I do for you today?"
+  - text: "How can I assist you with your cycling needs?"
+  - text: "I'm here to make your cycling experience even better! Ask me"
+
+  utter_find_a_route:
+  - text: "Sure, I can help you find the perfect route. Tell me a bit about what you're looking for."
+  - text: "I'm ready to map out your next cycling adventure! What kind of ride do you have in mind?"
+  - text: "Let's find a route that'll make your wheel spin with joy! What are your preferences?"
+
+  utter_get_directions:
+  - text: "Absolutely! I can provide you with directions. Where would you like to go?"
+  - text: "I'll guide you step by step. Just tell me your starting point and destination."
+  - text: "Ready to navigate? Let's get you on the right path. Share your route details."
+
+  utter_track_your_ride:
+  - text: "I'm on it! Tracking your ride now. Stay tuned for updates."
+  - text: "Let's see how far you've gond and how you're doing. Tracking in progress!"
+  - text: "Keeping tabs on your progress. I'll provide you with your ride stats shortly."
+
+# Image responses
+  # utter_bike_shop_image:
+  # - image: "path/to/bike_shop_image_jpg"
+
+  # utter_chain_lubing_image:
+  # - image: "path/to/chain_lubing_image_jpg"
+
+  # utter_helmet_image:
+  # - image: "path/to/helmet_image_jpg"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

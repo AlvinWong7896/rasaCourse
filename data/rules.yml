@@ -1,0 +1,24 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+# - rule: find_route_by_distance_and_difficulty
+#   steps:
+#     - slot: distance
+#       request: true
+#     - slot: difficulty
+#       request: true
+#     - action: find_route
+#       slots:
+#         distance: {type: distance}
+#         difficulty: {type: difficulty}
+
+# # Example rule for sharing a photo after a ride
+# - rule: share_ride_photo_after_complete
+#   trigger: intent(tell_me_about_your_ride)
+#   action: utter_ask_for_ride_photo
