@@ -36,7 +36,7 @@ nlu:
 
 - intent: find_a_route
   examples: |
-    - can u help me find a cycling route?
+    - find a cycling route?
     - I'm looking for a good place to go cycling
     - any suggestions for a scenic bike ride
     - can you recommend a route that's about 5km long?
